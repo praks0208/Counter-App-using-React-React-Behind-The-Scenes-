@@ -52,7 +52,8 @@ const Counter = memo(function Counter({ initialCount }) {
 
   const handleIncrement = useCallback(function handleIncrement() {
     // setCounter((prevCounter) => prevCounter + 1);
-    setCounterChanges((prevCounterChanges) => [{ value: 1, id: Math.random() * 1000 }, ...prevCounterChanges]);
+    setCounterChanges((prevCounterChanges) => [{ value: 1, id: Math.random() * 1000 }, 
+      ...prevCounterChanges]);
   }, []);
 
   return (
